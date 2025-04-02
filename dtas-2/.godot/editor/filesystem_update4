@@ -1,3 +1,4 @@
 res://scenes/World.tscn
 res://scenes/player.tscn
-res://scripts/player.gd
+res://scripts/playerController.gd
+res://scenes/playertest.tscn

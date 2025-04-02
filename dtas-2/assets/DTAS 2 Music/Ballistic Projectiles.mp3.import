@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://djv26lxqbk4ii"
+path="res://.godot/imported/Ballistic Projectiles.mp3-516d8a209158d4764186a44502fdaa29.mp3str"
+
+[deps]
+
+source_file="res://assets/DTAS 2 Music/Ballistic Projectiles.mp3"
+dest_files=["res://.godot/imported/Ballistic Projectiles.mp3-516d8a209158d4764186a44502fdaa29.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

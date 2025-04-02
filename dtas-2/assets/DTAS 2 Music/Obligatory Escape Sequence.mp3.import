@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://wssknmfyd7wq"
+path="res://.godot/imported/Obligatory Escape Sequence.mp3-245b78a47ac08047337d108a78899f52.mp3str"
+
+[deps]
+
+source_file="res://assets/DTAS 2 Music/Obligatory Escape Sequence.mp3"
+dest_files=["res://.godot/imported/Obligatory Escape Sequence.mp3-245b78a47ac08047337d108a78899f52.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

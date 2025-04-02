@@ -18,9 +18,13 @@ glow_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1lgw5"]
 albedo_texture = ExtResource("1_kqs1s")
+metallic = 0.51
+roughness = 0.74
 uv1_triplanar = true
 
 [node name="world" type="Node3D"]
+
+[node name="player" parent="." instance=ExtResource("2_32lhk")]
 
 [node name="env" type="Node3D" parent="."]
 
@@ -37,6 +41,3 @@ environment = SubResource("Environment_d1c63")
 transform = Transform3D(41.4917, 0, 0, 0, 1, 0, 0, 0, 75.1189, 0, 0, 0)
 use_collision = true
 material = SubResource("StandardMaterial3D_1lgw5")
-
-[node name="player" parent="." instance=ExtResource("2_32lhk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.72965, -7)

@@ -1,7 +1,10 @@
 Timer
-Sprite3D
+CSGPolygon3D
+MeshInstance3D
+ReflectionProbe
 Camera3D
 Node3D
 CollisionShape3D
 CharacterBody3D
+Sprite3D
 CSGBox3D

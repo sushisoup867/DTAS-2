@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b7fvm1u1vjg7s"
+path="res://.godot/imported/Maat Pact.mp3-176ce898dc3ab28908592951927dcde6.mp3str"
+
+[deps]
+
+source_file="res://assets/DTAS 2 Music/Maat Pact.mp3"
+dest_files=["res://.godot/imported/Maat Pact.mp3-176ce898dc3ab28908592951927dcde6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

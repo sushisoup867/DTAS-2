@@ -10,8 +10,12 @@ var current_speed = 20.0
 @export var running_speed = 20.0
 var ant_gravity_multiplier = 2.0
 
+@export var max_stamina := 100.0
+var current_stamina = max_stamina
+@export var stamina_recharge_rate := 10.0
+
 var dash_direction = Vector3.ZERO
-var dashing: bool = false
+var dashing : bool = false
 @export var dashing_speed = 50.0
 @export var dash_duration = 0.1
 
@@ -51,6 +55,15 @@ func dash(last_direction) -> void:
 
 func _on_dash_timer_timeout() -> void:
 	dashing = false
+
+func _on_stamina_timer_timeout() -> void:
+	if current_stamina < max_stamina:
+		current_stamina += stamina_recharge_rate / 10
+	
+	if current_stamina > max_stamina:
+		current_stamina = max_stamina
+	elif current_stamina < 0:
+		current_stamina = 0
 
 func _physics_process(delta: float) -> void:
 	var input_dir := Input.get_vector("strafe_left", "strafe_right", "move_forward", "move_backward")

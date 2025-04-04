@@ -24,5 +24,11 @@ one_shot = true
 wait_time = 0.1
 autostart = true
 
+[node name="TheMimic" type="Node" parent="."]
+
+[node name="IdlePlayerState" type="Node" parent="TheMimic"]
+
+[node name="WalkingPlayerState" type="Node" parent="TheMimic"]
+
 [connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="StaminaTimer" to="." method="_on_stamina_timer_timeout"]

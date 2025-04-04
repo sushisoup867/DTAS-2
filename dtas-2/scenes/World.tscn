@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://so2y2ftds3wx"]
+[gd_scene load_steps=8 format=3 uid="uid://so2y2ftds3wx"]
 
 [ext_resource type="Texture2D" uid="uid://dxfibk4f78j5b" path="res://assets/kenney_prototype-textures/PNG/Dark/texture_08.png" id="1_kqs1s"]
+[ext_resource type="PackedScene" uid="uid://d26ib4t08l8uo" path="res://scenes/HUD.tscn" id="2_7g83o"]
 [ext_resource type="PackedScene" uid="uid://i1a7ibay4x5f" path="res://scenes/player.tscn" id="2_32lhk"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_32lhk"]
@@ -34,6 +35,10 @@ shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="env"]
 environment = SubResource("Environment_d1c63")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("2_7g83o")]
 
 [node name="stage" type="Node3D" parent="."]
 

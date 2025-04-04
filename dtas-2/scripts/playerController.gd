@@ -12,12 +12,13 @@ var ant_gravity_multiplier = 2.0
 
 @export var max_stamina := 100.0
 var current_stamina = max_stamina
-@export var stamina_recharge_rate := 10.0
+@export var stamina_recharge_rate := 5.0
 
 var dash_direction = Vector3.ZERO
 var dashing : bool = false
 @export var dashing_speed = 50.0
 @export var dash_duration = 0.1
+@export var dash_cost = 33
 
 var mouse_sensitivity = 0.25
 
@@ -30,7 +31,7 @@ func release_mouse():
 func _ready() -> void:
 	capture_mouse()
 
-# Rotates based on mouse movement
+# Rotates head and character based on mouse movement
 func _input(event):
 	if event is InputEventMouseMotion:
 		rotate_y(deg_to_rad(-event.relative.x * mouse_sensitivity))
@@ -44,21 +45,25 @@ func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		capture_mouse()
 
+# Dash function
 func dash(last_direction) -> void:
-	$DashTimer.wait_time = dash_duration
-	if last_direction:
-		dash_direction = last_direction
-	else:
-		dash_direction = -transform.basis.z
-	$DashTimer.start()
-	dashing = true
+	if not dashing and current_stamina > dash_cost:
+		$DashTimer.wait_time = dash_duration
+		if last_direction:
+			dash_direction = last_direction
+		else:
+			dash_direction = -transform.basis.z
+		$DashTimer.start()
+		dashing = true
+		current_stamina -= dash_cost
 
 func _on_dash_timer_timeout() -> void:
 	dashing = false
 
+# Handles stamina regen
 func _on_stamina_timer_timeout() -> void:
 	if current_stamina < max_stamina:
-		current_stamina += stamina_recharge_rate / 10
+		current_stamina += stamina_recharge_rate
 	
 	if current_stamina > max_stamina:
 		current_stamina = max_stamina

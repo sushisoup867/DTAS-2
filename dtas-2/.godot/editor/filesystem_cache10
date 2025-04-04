@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1743631427
+::res://::1743782604
 icon.svg::CompressedTexture2D/CompressedTexture2D::2483839998875432445::1743193717::1743194966::1::::<><><>0<>0<>ebe70f8e914f69710c103a9c059bf607<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.s3tc.ctex::
 README.md::TextFile/TextFile::-1::1743193717::0::1::::<><><>0<>0<><>::
 ::res://assets/::1743623713
@@ -133,12 +133,11 @@ texture_13.svg::CompressedTexture2D/CompressedTexture2D::7500575881237984714::17
 ::res://assets/textures/kenney_prototype-textures/PNG/Purple/::1743623711
 ::res://assets/textures/kenney_prototype-textures/PNG/Red/::1743623712
 ::res://assets/textures/kenney_prototype-textures/Vector/::1743623713
-::res://levels/::1743622310
-::res://scenes/::1743631426
-oldplayer.tscn::PackedScene::615242137879614981::1743631415::0::1::::<><><>0<>0<><>::uid://bojputnjtyr68::::res://scripts/playerController.gd
-playertest.tscn::PackedScene::8775346482754537940::1743631410::0::1::::<><><>0<>0<><>::uid://23a55tucbai1::::res://scripts/playerControllerTest.gd
-World.tscn::PackedScene::1293984118622330451::1743631426::0::1::::<><><>0<>0<><>::uid://dxfibk4f78j5b::::res://assets/kenney_prototype-textures/PNG/Dark/texture_08.png
+::res://scenes/::1743632178
+player.tscn::PackedScene::615242137879614981::1743632178::0::1::::<><><>0<>0<><>::uid://bojputnjtyr68::::res://scripts/playerController.gd
+playertest.tscn::PackedScene::8775346482754537940::1743631449::0::1::::<><><>0<>0<><>::uid://23a55tucbai1::::res://scripts/playerControllerTest.gd
+World.tscn::PackedScene::1293984118622330451::1743631938::0::1::::<><><>0<>0<><>::uid://dxfibk4f78j5b::::res://assets/kenney_prototype-textures/PNG/Dark/texture_08.png<>uid://i1a7ibay4x5f::::res://scenes/player.tscn
 ::res://scenes/Levels/::1743623713
-::res://scripts/::1743631415
-playerController.gd::GDScript::3388591383643070675::1743623748::0::1::::<>CharacterBody3D<><>0<>0<><>::
+::res://scripts/::1743632178
+playerController.gd::GDScript::3388591383643070675::1743632178::0::1::::<>CharacterBody3D<><>0<>0<><>::
 playerControllerTest.gd::GDScript/GDScript::1952956535120903954::1743631271::0::1::::<>CharacterBody3D<><>0<>0<><>::

@@ -30,6 +30,7 @@ func release_mouse():
 
 func _ready() -> void:
 	capture_mouse()
+	Global.player = self
 
 # Rotates head and character based on mouse movement
 func _input(event):

@@ -1,6 +1,11 @@
 res://scenes/player.tscn
-res://scenes/World.tscn
-res://scenes/HUD.tscn
-res://scripts/HUD.gd
+res://scripts/the_mimic.gd
+res://scripts/States/idle_player_state.gd
+res://scripts/Global.gd
 res://scripts/playerController.gd
-res://scripts/state.gd
+res://scripts/States/walking_player_state.gd
+res://scripts/reticle.gd
+res://scenes/World.tscn
+res://ui/themes/debug_panel.tres
+res://ui/themes/debug_style.tres
+res://scripts/debug_panel.gd

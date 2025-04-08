@@ -1,13 +1,17 @@
-extends Control
-@onready var player: CharacterBody3D = $"../../player"
-@onready var debug: Label = $DEBUG
+extends CenterContainer
 
+@export var dot_radius : float = 1.0
+@export var dot_color : Color = Color.WHITE
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	queue_redraw()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	debug.text = "Stamina: " + str(player.current_stamina)
+	pass
+
+
+func _draw():
+	draw_circle(Vector2(0,0), dot_radius, dot_color)

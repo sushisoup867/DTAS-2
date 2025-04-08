@@ -1,0 +1,6 @@
+res://scenes/player.tscn
+res://scenes/World.tscn
+res://scenes/HUD.tscn
+res://scripts/HUD.gd
+res://scripts/playerController.gd
+res://scripts/state.gd

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://i1a7ibay4x5f"]
 
-[ext_resource type="Script" uid="uid://bojputnjtyr68" path="res://scripts/player.gd" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://bojputnjtyr68" path="res://scripts/playerController.gd" id="1_3vyb7"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
 
@@ -8,9 +8,27 @@
 script = ExtResource("1_3vyb7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_u8vuu")
 
 [node name="Head" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
+
+[node name="DashTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="StaminaTimer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[node name="TheMimic" type="Node" parent="."]
+
+[node name="IdlePlayerState" type="Node" parent="TheMimic"]
+
+[node name="WalkingPlayerState" type="Node" parent="TheMimic"]
+
+[connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]
+[connection signal="timeout" from="StaminaTimer" to="." method="_on_stamina_timer_timeout"]

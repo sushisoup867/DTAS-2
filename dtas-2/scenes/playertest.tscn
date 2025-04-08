@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxa3w6xvvog57"]
+
+[ext_resource type="Script" uid="uid://23a55tucbai1" path="res://scripts/playerControllerTest.gd" id="1_pyvia"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_u8vuu"]
+
+[node name="player" type="CharacterBody3D"]
+script = ExtResource("1_pyvia")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_u8vuu")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+mesh = SubResource("CapsuleMesh_u8vuu")
+
+[node name="CameraController" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="CameraController"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="CameraController/Camera3D"]
+update_mode = 1

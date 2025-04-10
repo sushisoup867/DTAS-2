@@ -1,8 +1,11 @@
+class_name Player
 extends CharacterBody3D
 
 # Import other components
 @onready var head: Node3D = $Head
 @onready var camera_3d: Camera3D = $Head/Camera3D
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+
 
 # Movement variables
 var current_speed = 20.0
@@ -20,6 +23,9 @@ var dashing : bool = false
 @export var dash_duration = 0.1
 @export var dash_cost = 33
 
+var is_sliding : bool = false
+@export_range(5, 10, 0.1) var slide_anim_speed : float = 1.0
+
 var mouse_sensitivity = 0.25
 
 # Functions for capturing and releasing the mouse
@@ -34,11 +40,17 @@ func _ready() -> void:
 
 # Rotates head and character based on mouse movement
 func _input(event):
+	# Rotate camera
 	if event is InputEventMouseMotion:
 		rotate_y(deg_to_rad(-event.relative.x * mouse_sensitivity))
 		head.rotate_x(deg_to_rad(-event.relative.y * mouse_sensitivity))
 		if is_on_floor():
 			head.rotation.x = clamp(head.rotation.x, deg_to_rad(-89), deg_to_rad(89))
+	# Handle sliding.
+	if event.is_action_pressed("slide"):
+		animation_player.play("slide", -1, slide_anim_speed, true)
+	else:
+		animation_player.play("slide", -1, -slide_anim_speed)
 
 func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_physical_key_pressed(KEY_ESCAPE):
@@ -70,6 +82,10 @@ func _on_stamina_timer_timeout() -> void:
 		current_stamina = max_stamina
 	elif current_stamina < 0:
 		current_stamina = 0
+
+# Add current stamina to hud/debug panel
+func _process(_delta):
+	Global.debug_panel.add_debug_property("Stamina", current_stamina, 1)
 
 func _physics_process(delta: float) -> void:
 	var input_dir := Input.get_vector("strafe_left", "strafe_right", "move_forward", "move_backward")

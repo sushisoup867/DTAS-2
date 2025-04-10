@@ -1,9 +1,9 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1744138964
+::res://::1744312900
 icon.svg::CompressedTexture2D/CompressedTexture2D::2483839998875432445::1743103062::1744138967::1::::<><><>0<>0<>ebe70f8e914f69710c103a9c059bf607<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.s3tc.ctex::
-README.md::TextFile::-1::1743103062::0::1::::<><><>0<>0<><>::
+README.md::TextFile/TextFile::-1::1743103062::0::1::::<><><>0<>0<><>::
 ::res://assets/::1744138861
-::res://assets/DTAS 2 Music/::1744138861
+::res://assets/DTAS 2 Music/::1744138966
 Ballistic Projectiles.mp3::AudioStreamMP3/AudioStreamMP3::7836008909088679340::1744138861::1744138966::1::::<><><>0<>0<>49ae96178b2e9e7d3834a48c7586f171<>res://.godot/imported/Ballistic Projectiles.mp3-516d8a209158d4764186a44502fdaa29.mp3str::
 Don't Plink.mp3::AudioStreamMP3/AudioStreamMP3::1794781719460776315::1744138861::1744138966::1::::<><><>0<>0<>e0a9ef9c4e053ebaf8166be3e9dd06c7<>res://.godot/imported/Don't Plink.mp3-41dd225d183cbeedc23ed11302bc2ccf.mp3str::
 Gluttony (AKA Better Outline).mp3::AudioStreamMP3/AudioStreamMP3::5690246723835313365::1744138861::1744138966::1::::<><><>0<>0<>b59c9d61f811f97b24bcb0ba189033b2<>res://.godot/imported/Gluttony (AKA Better Outline).mp3-c05a468c424626b29688b95bbe793f79.mp3str::
@@ -19,7 +19,7 @@ Temperance.mp3::AudioStreamMP3/AudioStreamMP3::941937320901551272::1744138861::1
 The Hunger.mp3::AudioStreamMP3/AudioStreamMP3::7826480586525406499::1744138861::1744138966::1::::<><><>0<>0<>bf54a9f80ae1fbacd4d709aa28317903<>res://.godot/imported/The Hunger.mp3-ccca88d36fb9823cf97bd46468463eb1.mp3str::
 Treachery.mp3::AudioStreamMP3/AudioStreamMP3::4048445801598139592::1744138861::1744138966::1::::<><><>0<>0<>200859dd84ab2ff79c7034dee43b0db1<>res://.godot/imported/Treachery.mp3-1a373e539845238990c94af5a9bc2235.mp3str::
 ::res://assets/kenney_prototype-textures/::1743103678
-License.txt::TextFile::-1::1743103666::0::1::::<><><>0<>0<><>::
+License.txt::TextFile/TextFile::-1::1743103666::0::1::::<><><>0<>0<><>::
 Preview.png::CompressedTexture2D/CompressedTexture2D::8337236718880894077::1743103666::1743103677::1::::<><><>0<>0<>58a37f857c62fcfd8512686e26aeca7d<>res://.godot/imported/Preview.png-326ae72d8743f7b9b69f6831624f7b88.ctex::
 Sample.png::CompressedTexture2D/CompressedTexture2D::9073250444742634915::1743103666::1743103678::1::::<><><>0<>0<>1a0739b8a67ccfe65a8c7d806a8d127f<>res://.godot/imported/Sample.png-c6009a3183b647fd09e37b923eb751f4.ctex::
 ::res://assets/kenney_prototype-textures/PNG/::1743103667
@@ -107,7 +107,7 @@ texture_10.png::CompressedTexture2D/CompressedTexture2D::3587410919058746220::17
 texture_11.png::CompressedTexture2D/CompressedTexture2D::4782172619479088314::1743103667::1743103678::1::::<><><>0<>0<>f530cd9002de888776f46b6f0192001b<>res://.godot/imported/texture_11.png-94a9bebccdaf8e80b7889d670ac8dc97.ctex::
 texture_12.png::CompressedTexture2D/CompressedTexture2D::7291982919449930848::1743103667::1743103678::1::::<><><>0<>0<>ffbd020b44a4a9c95cdd768e69145427<>res://.godot/imported/texture_12.png-b2465ae6613288baced3680c8468f2fb.ctex::
 texture_13.png::CompressedTexture2D/CompressedTexture2D::8517867391793560299::1743103667::1743103678::1::::<><><>0<>0<>9a202186684321b6d07bcebf6fff239c<>res://.godot/imported/texture_13.png-74e3741c40eeb581d3028213cf560454.ctex::
-::res://assets/kenney_prototype-textures/Vector/::1743103678
+::res://assets/kenney_prototype-textures/Vector/::1744138967
 texture_01.svg::CompressedTexture2D/CompressedTexture2D::7069383438598662792::1743103667::1744138967::1::::<><><>0<>0<>fe32ec2ef9a5b698aa7c93b46c739ed2<>res://.godot/imported/texture_01.svg-145178ab2f060302877da58e52b9be2a.ctex::
 texture_02.svg::CompressedTexture2D/CompressedTexture2D::171829107409286089::1743103667::1744138967::1::::<><><>0<>0<>fb52ec9248c2383254012dc5fa2280fe<>res://.godot/imported/texture_02.svg-81077c7db38ff115a017ac1582fbe372.ctex::
 texture_03.svg::CompressedTexture2D/CompressedTexture2D::1872055261942409162::1743103667::1744138967::1::::<><><>0<>0<>8d6e6d030a8b7f0d006ad298c7f8697d<>res://.godot/imported/texture_03.svg-9120cf8d776f4ba5d8363d92ab70c3bb.ctex::
@@ -121,13 +121,22 @@ texture_10.svg::CompressedTexture2D/CompressedTexture2D::5017966123017589209::17
 texture_11.svg::CompressedTexture2D/CompressedTexture2D::6369755792591735610::1743103667::1744138967::1::::<><><>0<>0<>6575f2e491e1fda0f9206a50fc3100a3<>res://.godot/imported/texture_11.svg-62c68d2892f50a0eac43893cc36c4f10.ctex::
 texture_12.svg::CompressedTexture2D/CompressedTexture2D::3762534980786043393::1743103667::1744138967::1::::<><><>0<>0<>9b6c504e50ac4336c46c03fc88ae965c<>res://.godot/imported/texture_12.svg-ee26132fe99f9c34f641dda49621507b.ctex::
 texture_13.svg::CompressedTexture2D/CompressedTexture2D::7500575881237984714::1743103667::1744138967::1::::<><><>0<>0<>55db7247ac5e8116900b8275b96f3888<>res://.godot/imported/texture_13.svg-314347bfdd89ef4c886a268956cd573c.ctex::
-::res://scenes/::1744138861
-HUD.tscn::PackedScene::9118845615126961154::1744138861::0::1::::<><><>0<>0<><>::uid://bqgwluppag0pl::::res://scripts/HUD.gd
-player.tscn::PackedScene::615242137879614981::1744138861::0::1::::<><><>0<>0<><>::uid://bojputnjtyr68::::res://scripts/playerController.gd
-playertest.tscn::PackedScene::8775346482754537940::1744138861::0::1::::<><><>0<>0<><>::uid://23a55tucbai1::::res://scripts/playerControllerTest.gd
-World.tscn::PackedScene::1293984118622330451::1744138861::0::1::::<><><>0<>0<><>::uid://dxfibk4f78j5b::::res://assets/kenney_prototype-textures/PNG/Dark/texture_08.png<>uid://d26ib4t08l8uo::::res://scenes/HUD.tscn<>uid://i1a7ibay4x5f::::res://scenes/player.tscn
-::res://scripts/::1744138861
-HUD.gd::GDScript::3523184940320659645::1744138861::0::1::::<>Control<><>0<>0<><>::
-playerController.gd::GDScript::3388591383643070675::1744138861::0::1::::<>CharacterBody3D<><>0<>0<><>::
-playerControllerTest.gd::GDScript::1952956535120903954::1744138861::0::1::::<>CharacterBody3D<><>0<>0<><>::
-state.gd::GDScript::7742321365208550324::1744138861::0::1::::State<>Node<><>0<>0<><>::
+::res://scenes/::1744142978
+player.tscn::PackedScene::615242137879614981::1744142967::0::1::::<><><>0<>0<><>::uid://bojputnjtyr68::::res://scripts/playerController.gd<>uid://bsg4xlcco7jed::::res://scripts/the_mimic.gd<>uid://b6rfxsjx0kpch::::res://scripts/States/idle_player_state.gd<>uid://b8q0qwp0551jv::::res://scripts/States/walking_player_state.gd<>uid://b0p72ss360xso::::res://scripts/reticle.gd<>uid://cv6t6wmo6r1to::::res://ui/themes/debug_panel.tres<>uid://clmhie1uh2e77::::res://scripts/debug_panel.gd
+playertest.tscn::PackedScene/PackedScene::8775346482754537940::1744138861::0::1::::<><><>0<>0<><>::uid://23a55tucbai1::::res://scripts/playerControllerTest.gd
+World.tscn::PackedScene::1293984118622330451::1744142978::0::1::::<><><>0<>0<><>::uid://dxfibk4f78j5b::::res://assets/kenney_prototype-textures/PNG/Dark/texture_08.png<>uid://i1a7ibay4x5f::::res://scenes/player.tscn
+::res://scripts/::1744142966
+debug_panel.gd::GDScript::5570130736931325240::1744142966::0::1::::<>PanelContainer<><>0<>0<><>::
+Global.gd::GDScript::2566208915950818408::1744140245::0::1::::<>Node<><>0<>0<><>::
+playerController.gd::GDScript::3388591383643070675::1744140264::0::1::::<>CharacterBody3D<><>0<>0<><>::
+playerControllerTest.gd::GDScript/GDScript::1952956535120903954::1744138861::0::1::::<>CharacterBody3D<><>0<>0<><>::
+reticle.gd::GDScript::4174099575700176518::1744141123::0::1::::<>CenterContainer<><>0<>0<><>::
+state.gd::GDScript/GDScript::7742321365208550324::1744138861::0::1::::State<>Node<><>0<>0<><>::
+the_mimic.gd::GDScript::3664008582709390927::1744141459::0::1::::TheMimic<>Node<><>0<>0<><>::
+::res://scripts/States/::1744141814
+idle_player_state.gd::GDScript::4597714876917142023::1744141814::0::1::::IdlePlayerState<>State<><>0<>0<><>::
+walking_player_state.gd::GDScript::4737230245197720671::1744141547::0::1::::WalkingPlayerState<>State<><>0<>0<><>::
+::res://ui/::1744142083
+::res://ui/themes/::1744142355
+debug_panel.tres::Theme::6312012951363927220::1744142355::0::1::::<><><>0<>0<><>::uid://da3gsnfumfeh8::::res://ui/themes/debug_style.tres
+debug_style.tres::StyleBoxFlat::7217461765892383687::1744142355::0::1::::<><><>0<>0<><>::

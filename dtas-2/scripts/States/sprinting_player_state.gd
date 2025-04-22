@@ -1,17 +1,15 @@
-class_name WalkingPlayerState
+class_name SprintingPlayerState
 
 extends PlayerMovementState
 
-@export var speed : float = 10.0
+@export var speed : float = 20.0
 
 func update(delta):
 	player.update_gravity(delta)
 	player.update_input(speed)
 	player.update_velocity()
 	
-	if Input.is_action_just_pressed("sprint"):
-		transition.emit("SprintingPlayerState")
 	if Input.is_action_just_pressed("slide") and player.is_on_floor():
 		transition.emit("CrouchingPlayerState")
-	if Global.player.velocity.length() == 0.0:
+	if Input.is_action_just_released("sprint") or player.velocity.length() == 0.0:
 		transition.emit("IdlePlayerState")

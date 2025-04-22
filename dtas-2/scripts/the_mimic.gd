@@ -12,6 +12,8 @@ func _ready():
 			child.transition.connect(on_child_transition)
 		else:
 			push_warning("ayo that's not a state :skull_emoji:")
+	await owner.ready
+	current_state.enter()
 
 func _process(delta):
 	current_state.update(delta)

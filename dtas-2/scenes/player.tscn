@@ -1,54 +1,16 @@
-[gd_scene load_steps=13 format=3 uid="uid://i1a7ibay4x5f"]
+[gd_scene load_steps=15 format=3 uid="uid://i1a7ibay4x5f"]
 
 [ext_resource type="Script" uid="uid://bojputnjtyr68" path="res://scripts/playerController.gd" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://bsg4xlcco7jed" path="res://scripts/the_mimic.gd" id="2_g2els"]
 [ext_resource type="Script" uid="uid://b6rfxsjx0kpch" path="res://scripts/States/idle_player_state.gd" id="3_qhqgy"]
 [ext_resource type="Script" uid="uid://b8q0qwp0551jv" path="res://scripts/States/walking_player_state.gd" id="4_dqkch"]
 [ext_resource type="Script" uid="uid://b0p72ss360xso" path="res://scripts/reticle.gd" id="5_qlg0r"]
-[ext_resource type="Script" uid="uid://dvtvlmlfxxl1b" path="res://scripts/sliding_player_state.gd" id="5_smehm"]
+[ext_resource type="Script" uid="uid://dvtvlmlfxxl1b" path="res://scripts/States/crouching_player_state.gd" id="5_smehm"]
 [ext_resource type="Theme" uid="uid://cv6t6wmo6r1to" path="res://ui/themes/debug_panel.tres" id="6_tuyoq"]
+[ext_resource type="Script" uid="uid://cqnuyt4rw41my" path="res://scripts/States/sprinting_player_state.gd" id="6_ur7pv"]
 [ext_resource type="Script" uid="uid://clmhie1uh2e77" path="res://scripts/debug_panel.gd" id="7_fjrip"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
-
-[sub_resource type="Animation" id="Animation_fjrip"]
-resource_name = "slide"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CollisionShape3D:shape:height")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [2.0, 1.5]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CollisionShape3D:position")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 1, 0), Vector3(0, 0.75, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Head:position")
-tracks/2/interp = 2
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 1.5, 0), Vector3(0, 1, 0)]
-}
 
 [sub_resource type="Animation" id="Animation_smehm"]
 length = 0.001
@@ -89,14 +51,57 @@ tracks/2/keys = {
 "values": [Vector3(0, 1.5, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_fjrip"]
+resource_name = "slide"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape3D:shape:height")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [2.0, 1.5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape3D:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1, 0), Vector3(0, 0.75, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Head:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5, 0), Vector3(0, 1, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ur7pv"]
 _data = {
 &"RESET": SubResource("Animation_smehm"),
 &"slide": SubResource("Animation_fjrip")
 }
 
-[node name="player" type="CharacterBody3D"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_smehm"]
+
+[node name="player" type="CharacterBody3D" node_paths=PackedStringArray("ANIMATIONPLAYER", "CROUCH_SHAPECAST")]
 script = ExtResource("1_3vyb7")
+ANIMATIONPLAYER = NodePath("AnimationPlayer")
+CROUCH_SHAPECAST = NodePath("ShapeCast3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -111,6 +116,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 update_mode = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
 libraries = {
 &"": SubResource("AnimationLibrary_ur7pv")
 }
@@ -133,8 +139,12 @@ script = ExtResource("3_qhqgy")
 [node name="WalkingPlayerState" type="Node" parent="TheMimic"]
 script = ExtResource("4_dqkch")
 
-[node name="SlidingPlayerState" type="Node" parent="TheMimic"]
+[node name="CrouchingPlayerState" type="Node" parent="TheMimic"]
 script = ExtResource("5_smehm")
+
+[node name="SprintingPlayerState" type="Node" parent="TheMimic"]
+script = ExtResource("6_ur7pv")
+metadata/_custom_type_script = "uid://cpy0s5vfbu7cg"
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
@@ -188,6 +198,13 @@ layout_mode = 2
 [node name="VBoxContainer" type="VBoxContainer" parent="UI/DebugPanel/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+
+[node name="ShapeCast3D" type="ShapeCast3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("SphereShape3D_smehm")
+target_position = Vector3(0, 0.5, 0)
+debug_shape_custom_color = Color(0.435416, 0.801574, 0, 1)
 
 [connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="StaminaTimer" to="." method="_on_stamina_timer_timeout"]

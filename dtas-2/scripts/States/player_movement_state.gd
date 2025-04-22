@@ -9,7 +9,7 @@ var animation: AnimationPlayer
 func _ready() -> void:
 	await owner.ready
 	player = owner as Player
-	animation = player.animation
+	animation = player.ANIMATIONPLAYER
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

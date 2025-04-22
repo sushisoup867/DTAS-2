@@ -2,11 +2,3 @@ res://scenes/World.tscn
 res://ui/themes/debug_style.tres
 res://ui/themes/debug_panel.tres
 res://scenes/player.tscn
-res://scripts/Global.gd
-res://scripts/debug_panel.gd
-res://scripts/the_mimic.gd
-res://scripts/playerController.gd
-res://scripts/States/walking_player_state.gd
-res://scripts/States/idle_player_state.gd
-res://scripts/States/player_movement_state.gd
-res://scripts/sliding_player_state.gd

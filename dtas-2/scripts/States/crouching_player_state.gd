@@ -7,8 +7,8 @@ extends PlayerMovementState
 
 @onready var shape_cast_3d: ShapeCast3D = %ShapeCast3D
 
-func enter() -> void:
-	animation.play("slide", -1.0, crouching_speed)
+func enter(previous_state) -> void:
+	animation.play("crouch", -1.0, crouching_speed)
 
 func update(delta):
 	player.update_gravity(delta)
@@ -20,7 +20,7 @@ func update(delta):
 
 func unslide():
 	if shape_cast_3d.is_colliding() == false and Input.is_action_pressed("slide") == false:
-		animation.play("slide", -1.0, -crouching_speed * 1.5, true)
+		animation.play("crouch", -1.0, -crouching_speed * 1.5, true)
 		if animation.is_playing():
 			await animation.animation_finished
 		transition.emit("IdlePlayerState")

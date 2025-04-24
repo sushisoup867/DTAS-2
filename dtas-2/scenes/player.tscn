@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://i1a7ibay4x5f"]
+[gd_scene load_steps=16 format=3 uid="uid://i1a7ibay4x5f"]
 
 [ext_resource type="Script" uid="uid://bojputnjtyr68" path="res://scripts/playerController.gd" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://bsg4xlcco7jed" path="res://scripts/the_mimic.gd" id="2_g2els"]
@@ -9,6 +9,7 @@
 [ext_resource type="Theme" uid="uid://cv6t6wmo6r1to" path="res://ui/themes/debug_panel.tres" id="6_tuyoq"]
 [ext_resource type="Script" uid="uid://cqnuyt4rw41my" path="res://scripts/States/sprinting_player_state.gd" id="6_ur7pv"]
 [ext_resource type="Script" uid="uid://clmhie1uh2e77" path="res://scripts/debug_panel.gd" id="7_fjrip"]
+[ext_resource type="Script" uid="uid://cjo3fy7gue53w" path="res://scripts/States/sliding_player_state.gd" id="7_y4r1p"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
 
@@ -93,7 +94,7 @@ tracks/2/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ur7pv"]
 _data = {
 &"RESET": SubResource("Animation_smehm"),
-&"slide": SubResource("Animation_fjrip")
+&"crouch": SubResource("Animation_fjrip")
 }
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_smehm"]
@@ -144,6 +145,10 @@ script = ExtResource("5_smehm")
 
 [node name="SprintingPlayerState" type="Node" parent="TheMimic"]
 script = ExtResource("6_ur7pv")
+metadata/_custom_type_script = "uid://cpy0s5vfbu7cg"
+
+[node name="SlidingPlayerState" type="Node" parent="TheMimic"]
+script = ExtResource("7_y4r1p")
 metadata/_custom_type_script = "uid://cpy0s5vfbu7cg"
 
 [node name="UI" type="Control" parent="."]

@@ -27,7 +27,7 @@ func on_child_transition(new_state_name: StringName) -> void:
 	if new_state != null:
 		if new_state != current_state:
 			current_state.exit()
-			new_state.enter()
+			new_state.enter(current_state)
 			current_state = new_state
 	else:
 		push_warning("tf that's not a state dumbass")

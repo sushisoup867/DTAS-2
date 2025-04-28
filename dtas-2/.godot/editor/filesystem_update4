@@ -1,9 +1,4 @@
-res://scenes/World.tscn
+res://scenes/player.tscn
 res://ui/themes/debug_style.tres
 res://ui/themes/debug_panel.tres
-res://scenes/player.tscn
-res://scripts/States/crouching_player_state.gd
 res://scripts/States/sliding_player_state.gd
-res://scripts/the_mimic.gd
-res://scripts/state.gd
-res://scripts/playerController.gd

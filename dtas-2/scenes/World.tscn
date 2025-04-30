@@ -41,3 +41,8 @@ environment = SubResource("Environment_d1c63")
 transform = Transform3D(41.4917, 0, 0, 0, 1, 0, 0, 0, 75.1189, 0, 0, 0)
 use_collision = true
 material = SubResource("StandardMaterial3D_1lgw5")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="stage"]
+transform = Transform3D(1, 0, 0, 0, 6.73758, 0, 0, 0, 22.5219, -19.7054, 6.97984, -0.824779)
+use_collision = true
+size = Vector3(1, 2.51263, 3.09473)

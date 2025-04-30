@@ -20,7 +20,7 @@ var _current_rotation : float
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 
-var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+@export var gravity = 12
 
 func _unhandled_input(event: InputEvent) -> void:
 	_mouse_input = event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED

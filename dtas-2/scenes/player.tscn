@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://i1a7ibay4x5f"]
+[gd_scene load_steps=18 format=3 uid="uid://i1a7ibay4x5f"]
 
 [ext_resource type="Script" uid="uid://bojputnjtyr68" path="res://scripts/playerController.gd" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://bsg4xlcco7jed" path="res://scripts/the_mimic.gd" id="2_g2els"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://cqnuyt4rw41my" path="res://scripts/States/sprinting_player_state.gd" id="6_ur7pv"]
 [ext_resource type="Script" uid="uid://clmhie1uh2e77" path="res://scripts/debug_panel.gd" id="7_fjrip"]
 [ext_resource type="Script" uid="uid://cjo3fy7gue53w" path="res://scripts/States/sliding_player_state.gd" id="7_y4r1p"]
+[ext_resource type="Script" uid="uid://dvkhxopwphvk3" path="res://scripts/States/jumping_player_state.gd" id="8_d2wvv"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
 
@@ -100,45 +101,6 @@ tracks/6/keys = {
 "values": [75.0]
 }
 
-[sub_resource type="Animation" id="Animation_fjrip"]
-resource_name = "slide"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CollisionShape3D:shape:height")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [2.0, 1.5]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CollisionShape3D:position")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 1, 0), Vector3(0, 0.75, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Head:position")
-tracks/2/interp = 2
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 1.5, 0), Vector3(0, 1, 0)]
-}
-
 [sub_resource type="Animation" id="Animation_y4r1p"]
 resource_name = "Sliding"
 length = 5.0
@@ -212,7 +174,7 @@ tracks/5/keys = {
 "times": PackedFloat32Array(1, 5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [6.0, 4.0]
+"values": [25.0, 15.0]
 }
 tracks/6/type = "method"
 tracks/6/imported = false
@@ -239,6 +201,45 @@ tracks/7/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [75.0, 84.0, 75.0]
+}
+
+[sub_resource type="Animation" id="Animation_fjrip"]
+resource_name = "slide"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape3D:shape:height")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [2.0, 1.5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape3D:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1, 0), Vector3(0, 0.75, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Head:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5, 0), Vector3(0, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ur7pv"]
@@ -300,6 +301,11 @@ metadata/_custom_type_script = "uid://cpy0s5vfbu7cg"
 
 [node name="SlidingPlayerState" type="Node" parent="TheMimic"]
 script = ExtResource("7_y4r1p")
+speed = 20.0
+metadata/_custom_type_script = "uid://cpy0s5vfbu7cg"
+
+[node name="JumpingPlayerState" type="Node" parent="TheMimic"]
+script = ExtResource("8_d2wvv")
 metadata/_custom_type_script = "uid://cpy0s5vfbu7cg"
 
 [node name="UI" type="Control" parent="."]

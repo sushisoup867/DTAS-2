@@ -9,9 +9,14 @@ func update(delta):
 	player.update_input(speed)
 	player.update_velocity()
 	
+	if Input.is_action_just_pressed('jump') and player.is_on_floor():
+		transition.emit('JumpingPlayerState')
+	
 	if Input.is_action_just_pressed("sprint"):
 		transition.emit("SprintingPlayerState")
+	
 	if Input.is_action_just_pressed("slide") and player.is_on_floor():
 		transition.emit("CrouchingPlayerState")
+	
 	if Global.player.velocity.length() == 0.0:
 		transition.emit("IdlePlayerState")

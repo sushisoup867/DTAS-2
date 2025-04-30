@@ -13,7 +13,7 @@ func _ready():
 		else:
 			push_warning("ayo that's not a state :skull_emoji:")
 	await owner.ready
-	current_state.enter()
+	current_state.enter(current_state)
 
 func _process(delta):
 	current_state.update(delta)

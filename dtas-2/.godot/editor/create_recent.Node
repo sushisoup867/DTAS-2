@@ -1,3 +1,5 @@
+CollisionShape3D
+CSGBox3D
 PlayerMovementState
 ShapeCast3D
 State
@@ -11,4 +13,3 @@ Line2D
 CenterContainer
 Control
 CanvasLayer
-Label

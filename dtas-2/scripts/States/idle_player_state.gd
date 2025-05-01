@@ -4,6 +4,13 @@ extends PlayerMovementState
 
 @export var speed : float = 10.0
 
+func enter(previous_state):
+	if animation.is_playing() and animation.current_animation == 'jump_end':
+		await animation.animation_finished
+		animation.pause()
+	else:
+		animation.pause()
+
 func update(delta):
 	player.update_gravity(delta)
 	player.update_input(speed)

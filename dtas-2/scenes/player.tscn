@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://i1a7ibay4x5f"]
+[gd_scene load_steps=20 format=3 uid="uid://i1a7ibay4x5f"]
 
 [ext_resource type="Script" uid="uid://bojputnjtyr68" path="res://scripts/playerController.gd" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://bsg4xlcco7jed" path="res://scripts/the_mimic.gd" id="2_g2els"]
@@ -242,11 +242,69 @@ tracks/2/keys = {
 "values": [Vector3(0, 1.5, 0), Vector3(0, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_d2wvv"]
+resource_name = "jump_start"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5),
+"transitions": PackedFloat32Array(2, 2, 0.5),
+"update": 0,
+"values": [Vector3(0, 1.5, 0), Vector3(0, 1.45, 0), Vector3(0, 1.5, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5),
+"transitions": PackedFloat32Array(2, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.0349066, 0, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_3v2ag"]
+resource_name = "jump_end"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.085, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5, 0), Vector3(0, 1.45, 0), Vector3(0, 1.5, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.085, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.0698132, 0, 0), Vector3(0, 0, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ur7pv"]
 _data = {
 &"RESET": SubResource("Animation_smehm"),
 &"Sliding": SubResource("Animation_y4r1p"),
-&"crouch": SubResource("Animation_fjrip")
+&"crouch": SubResource("Animation_fjrip"),
+&"jump_end": SubResource("Animation_3v2ag"),
+&"jump_start": SubResource("Animation_d2wvv")
 }
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_smehm"]

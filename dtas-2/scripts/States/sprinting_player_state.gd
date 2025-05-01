@@ -10,7 +10,6 @@ func update(delta):
 	player.update_velocity()
 	
 	if Input.is_action_just_pressed('jump') and player.is_on_floor:
-		print('Attempting to enter jumping state')
 		transition.emit('JumpingPlayerState')
 	
 	if Input.is_action_just_pressed("slide") and player.is_on_floor():

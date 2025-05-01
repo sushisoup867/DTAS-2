@@ -2,6 +2,4 @@ res://scenes/World.tscn
 res://ui/themes/debug_style.tres
 res://ui/themes/debug_panel.tres
 res://scenes/player.tscn
-res://scripts/States/sprinting_player_state.gd
 res://scripts/States/jumping_player_state.gd
-res://scripts/States/idle_player_state.gd

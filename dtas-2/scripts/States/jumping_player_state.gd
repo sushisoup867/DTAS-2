@@ -26,6 +26,7 @@ func update(delta):
 	if Input.is_action_just_pressed('jump') and !double_jump:
 		player.velocity.y = double_jump_velocity
 		animation.play('jump_start')
+		double_jump = true
 	if Input.is_action_just_pressed('slide'):
 		player.velocity.y = -75
 	

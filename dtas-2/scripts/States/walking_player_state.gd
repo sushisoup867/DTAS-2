@@ -20,3 +20,6 @@ func update(delta):
 	
 	if Global.player.velocity.length() == 0.0:
 		transition.emit("IdlePlayerState")
+	
+	if player.velocity.y < -3 and !player.is_on_floor():
+		transition.emit('FallingPlayerState')

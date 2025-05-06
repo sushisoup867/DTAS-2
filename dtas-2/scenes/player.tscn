@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://i1a7ibay4x5f"]
+[gd_scene load_steps=21 format=3 uid="uid://i1a7ibay4x5f"]
 
 [ext_resource type="Script" uid="uid://bojputnjtyr68" path="res://scripts/playerController.gd" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://bsg4xlcco7jed" path="res://scripts/the_mimic.gd" id="2_g2els"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://clmhie1uh2e77" path="res://scripts/debug_panel.gd" id="7_fjrip"]
 [ext_resource type="Script" uid="uid://cjo3fy7gue53w" path="res://scripts/States/sliding_player_state.gd" id="7_y4r1p"]
 [ext_resource type="Script" uid="uid://dvkhxopwphvk3" path="res://scripts/States/jumping_player_state.gd" id="8_d2wvv"]
+[ext_resource type="Script" uid="uid://bblwtx07kle76" path="res://scripts/States/falling_player_state.gd" id="9_3v2ag"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
 
@@ -326,6 +327,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 [node name="ReflectionProbe" type="ReflectionProbe" parent="Head/Camera3D"]
 update_mode = 1
 
+[node name="WeaponRig" type="Node3D" parent="Head/Camera3D"]
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
 libraries = {
@@ -364,6 +367,10 @@ metadata/_custom_type_script = "uid://cpy0s5vfbu7cg"
 
 [node name="JumpingPlayerState" type="Node" parent="TheMimic"]
 script = ExtResource("8_d2wvv")
+metadata/_custom_type_script = "uid://cpy0s5vfbu7cg"
+
+[node name="FallingPlayerState" type="Node" parent="TheMimic"]
+script = ExtResource("9_3v2ag")
 metadata/_custom_type_script = "uid://cpy0s5vfbu7cg"
 
 [node name="UI" type="Control" parent="."]

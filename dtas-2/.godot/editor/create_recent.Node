@@ -1,4 +1,8 @@
+MeshInstance3D
 Node3D
+Camera3D
+SubViewport
+SubViewportContainer
 PlayerMovementState
 CollisionShape3D
 CSGBox3D
@@ -9,7 +13,3 @@ AnimationPlayer
 ReflectionProbe
 VBoxContainer
 MarginContainer
-PanelContainer
-Line2D
-CenterContainer
-Control

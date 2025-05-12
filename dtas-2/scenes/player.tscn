@@ -1,6 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://i1a7ibay4x5f"]
+[gd_scene load_steps=22 format=3 uid="uid://i1a7ibay4x5f"]
 
 [ext_resource type="Script" uid="uid://bojputnjtyr68" path="res://scripts/playerController.gd" id="1_3vyb7"]
+[ext_resource type="PackedScene" uid="uid://m7ahrqvuhog8" path="res://assets/Models/Weapons/Sword/sword.tscn" id="2_f1ej7"]
 [ext_resource type="Script" uid="uid://bsg4xlcco7jed" path="res://scripts/the_mimic.gd" id="2_g2els"]
 [ext_resource type="Script" uid="uid://b6rfxsjx0kpch" path="res://scripts/States/idle_player_state.gd" id="3_qhqgy"]
 [ext_resource type="Script" uid="uid://b8q0qwp0551jv" path="res://scripts/States/walking_player_state.gd" id="4_dqkch"]
@@ -328,6 +329,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 update_mode = 1
 
 [node name="WeaponRig" type="Node3D" parent="Head/Camera3D"]
+
+[node name="sword" parent="Head/Camera3D/WeaponRig" instance=ExtResource("2_f1ej7")]
+transform = Transform3D(-1.09278e-08, 0.25, 0, -0.241481, -1.05555e-08, 0.0647048, 0.0647048, 2.82833e-09, 0.241481, 0.5, -0.75, -0.5)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true

@@ -1,8 +1,0 @@
-res://scenes/player.tscn
-res://ui/themes/debug_style.tres
-res://ui/themes/debug_panel.tres
-res://scenes/World.tscn
-res://assets/Models/Weapons/Sword/sword.tscn
-res://scripts/sub_viewport.gd
-res://scripts/weapon_camera.gd
-res://assets/Models/Weapons/Sword/sword.res

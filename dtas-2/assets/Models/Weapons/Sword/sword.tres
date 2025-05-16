@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Weapons" load_steps=3 format=3 uid="uid://b63xm4dhhdokx"]
+
+[ext_resource type="Script" uid="uid://cbxk7qjr1u6rn" path="res://assets/Models/Weapons/weapons.gd" id="1_7jk0k"]
+[ext_resource type="ArrayMesh" uid="uid://dq3mt1vdvqm8a" path="res://assets/Models/Weapons/Sword/sword.res" id="1_w4op2"]
+
+[resource]
+script = ExtResource("1_7jk0k")
+name = &"Sword"
+position = Vector3(0.5, -0.5, -0.5)
+rotation = Vector3(-12.8, 0, -90)
+scale = Vector3(0.25, 0.25, 0.25)
+mesh = ExtResource("1_w4op2")
+metadata/_custom_type_script = "uid://cbxk7qjr1u6rn"

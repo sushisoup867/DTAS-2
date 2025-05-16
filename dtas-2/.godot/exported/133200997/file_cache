@@ -1,0 +1,11 @@
+res://assets/Models/Weapons/Mordhau/mordhau.tres::e691a062fc63475e78d839fcf7baf848::1747251229::res://.godot/exported/133200997/export-0adc9fcc349eb2e1a0d1f83f2b72fe8b-mordhau.res
+res://assets/Models/Weapons/Pistol/pistol.tres::9ff803b0430dd149f730d07f35cffe6b::1747252492::res://.godot/exported/133200997/export-22bc0b43da5a3e52f9c5b936436c5df3-pistol.res
+res://assets/Models/Weapons/Sword/sword.tres::baf9fc54a8c222478ceb39908fe55daf::1747251110::res://.godot/exported/133200997/export-d137690852c5e70a3dd4980e3ae3a0e7-sword.res
+res://assets/Models/Weapons/Sword/sword.tscn::43fe84231ad645fbf8b1e408681728f5::1747253207::res://.godot/exported/133200997/export-f7a5b4d79a7674944ce3fe02062a8a92-sword.scn
+res://scenes/player.tscn::e23d5f9ee0ddaad759939598921408f5::1747253207::res://.godot/exported/133200997/export-234fb6894ec6226e856ab7f825500d3d-player.scn
+res://scenes/playertest.tscn::6847d322edad62c9c8be10a04354f69e::1744138861::res://.godot/exported/133200997/export-fb7b613892d757699067c646d09f8141-playertest.scn
+res://scenes/test_level.tscn::67619e240cefed181340412c7b5e4da6::1747253242::res://.godot/exported/133200997/export-7416c34946b4d969d354a1f25ed3ee62-test_level.scn
+res://scenes/test_level_stuff.tscn::05a6ca1c63dc68d4653d2114517d3cd7::1747253207::res://.godot/exported/133200997/export-dea5d96ca19e627440044cfad014b63b-test_level_stuff.scn
+res://scenes/World.tscn::76a0e4f43038785a81f2b21e077f4389::1747253207::res://.godot/exported/133200997/export-57a8a85058368be1f5628ef4b8140bf5-World.scn
+res://ui/themes/debug_panel.tres::40097f2576e836e6128f0cc6841f047a::1747252801::res://.godot/exported/133200997/export-b6cf304526806b5ae19ac3945e60b03e-debug_panel.res
+res://ui/themes/debug_style.tres::ec9da33db290229e579745acc41f0122::1747252801::res://.godot/exported/133200997/export-4899245656e27747f13659525b25cca6-debug_style.res

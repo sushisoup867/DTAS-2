@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Weapons" load_steps=3 format=3 uid="uid://dhq1pu124g26h"]
+
+[ext_resource type="ArrayMesh" uid="uid://dq3mt1vdvqm8a" path="res://assets/Models/Weapons/Sword/sword.res" id="1_8gfyd"]
+[ext_resource type="Script" uid="uid://cbxk7qjr1u6rn" path="res://assets/Models/Weapons/weapons.gd" id="1_vdanr"]
+
+[resource]
+script = ExtResource("1_vdanr")
+name = &"Mordhau"
+position = Vector3(0.5, 0.2, -0.5)
+rotation = Vector3(-6, 0, 90)
+scale = Vector3(0.25, 0.25, 0.25)
+mesh = ExtResource("1_8gfyd")
+metadata/_custom_type_script = "uid://cbxk7qjr1u6rn"
